@@ -1,8 +1,8 @@
 public class Main {
-
+    //Number of Instructions: 32
     public static void main(String[] args) {
-
         int num1 = 874, num2 = 222, num3 = 158, num4 = 555, num5 = 696, num6 = 1, num7 = 999, num8 = 888, num9 = 769, num10 = 399;
+
         toBinary(num1);
         toBinary(num2);
         toBinary(num3);

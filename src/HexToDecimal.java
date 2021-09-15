@@ -1,6 +1,5 @@
-import java.util.Locale;
-
 public class HexToDecimal {
+	//Number of Instructions: 41/61
 	public static void main(String[] args) {
 		String hex1 = "36a";
 		String hex2 = "de";
@@ -38,6 +37,7 @@ public class HexToDecimal {
 		System.out.println(decimal9);
 		System.out.println(decimal10);
 		 */
+
 		System.out.println(getDecimal(hex1));
 		System.out.println(getDecimal(hex2));
 		System.out.println(getDecimal(hex3));

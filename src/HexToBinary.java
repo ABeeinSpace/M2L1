@@ -1,4 +1,5 @@
 public class HexToBinary {
+	//Number of Instructions: 60
 	public static void main(String[] args) {
 		String hex1 = "36a";
 		String hex2 = "de";

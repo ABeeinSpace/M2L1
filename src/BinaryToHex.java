@@ -1,4 +1,5 @@
 public class BinaryToHex {
+	//Number of Instructions: 68/88
 	public static void main(String[] args) {
 		int num1 = 1101101010;
 		int num2 = 11011110;
