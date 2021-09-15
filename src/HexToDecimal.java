@@ -2,6 +2,9 @@ import java.util.Locale;
 
 public class HexToDecimal {
 	public static void main(String[] args) {
+
+		long startTime = System.nanoTime();
+
 		String hex1 = "36a";
 		String hex2 = "de";
 		String hex3 = "9e";
@@ -48,6 +51,12 @@ public class HexToDecimal {
 		System.out.println(getDecimal(hex8));
 		System.out.println(getDecimal(hex9));
 		System.out.println(getDecimal(hex10));
+
+		long endTime = System.nanoTime();
+		long elapsedTime = endTime - startTime;
+		System.out.println("Total elapsed time: " + elapsedTime + " nanoseconds.");
+		long oneRunElapsed = elapsedTime / 10;
+		System.out.println("Time for One Run: " + oneRunElapsed + " nanoseconds.");
 	}
 
 	public static int getDecimal(String hex){

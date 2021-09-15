@@ -1,5 +1,8 @@
 public class BinaryToHex {
 	public static void main(String[] args) {
+
+		long startTime = System.nanoTime();
+
 		int num1 = 1101101010;
 		int num2 = 11011110;
 		int num3 = 10011110;
@@ -56,6 +59,12 @@ public class BinaryToHex {
 		System.out.println(decToHex(decimal8));
 		System.out.println(decToHex(decimal9));
 		System.out.println(decToHex(decimal10));
+
+		long endTime = System.nanoTime();
+		long elapsedTime = endTime - startTime;
+		System.out.println("Total elapsed time: " + elapsedTime + " nanoseconds.");
+		long oneRunElapsed = elapsedTime / 10;
+		System.out.println("Time for One Run: " + oneRunElapsed + " nanoseconds.");
 
 	}
 

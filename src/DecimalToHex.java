@@ -1,6 +1,9 @@
 public class DecimalToHex {
 
 	public static void main(String[] args) {
+
+		long startTime = System.nanoTime();
+
 		int num1 = 874, num2 = 222, num3 = 158, num4 = 555, num5 = 696, num6 = 1, num7 = 999, num8 = 888, num9 = 769, num10 = 399;
 		/*
 		System.out.println(Integer.toHexString(num1));
@@ -26,6 +29,11 @@ public class DecimalToHex {
 		System.out.println(decToHex(num9));
 		System.out.println(decToHex(num10));
 
+		long endTime = System.nanoTime();
+		long elapsedTime = endTime - startTime;
+		System.out.println("Total elapsed time: " + elapsedTime + " nanoseconds.");
+		long oneRunElapsed = elapsedTime / 10;
+		System.out.println("Time for One Run: " + oneRunElapsed + " nanoseconds.");
 
 	}
 
