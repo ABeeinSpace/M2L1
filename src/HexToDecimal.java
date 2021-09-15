@@ -8,10 +8,10 @@ public class HexToDecimal {
 		String hex4 = "22b";
 		String hex5 = "2b8";
 		String hex6 = "1";
-		String hex7 = "1708";
-		String hex8 = "22b8";
-		String hex9 = "12cb9";
-		String hex10 = "75bcd15";
+		String hex7 = "3e7";
+		String hex8 = "378";
+		String hex9 = "301";
+		String hex10 = "18f";
 
 		/*
 		int decimal1 = Integer.parseInt(hex1,16);

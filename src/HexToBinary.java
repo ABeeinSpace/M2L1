@@ -6,21 +6,21 @@ public class HexToBinary {
 		String hex4 = "22b";
 		String hex5 = "2b8";
 		String hex6 = "1";
-		String hex7 = "1708";
-		String hex8 = "22b8";
-		String hex9 = "12cb9";
-		String hex10 = "75bcd15";
+		String hex7 = "3e7";
+		String hex8 = "378";
+		String hex9 = "301";
+		String hex10 = "18f";
 
-		int decimal1 = Integer.parseInt(hex1,16);
-		int decimal2 = Integer.parseInt(hex2,16);
-		int decimal3 = Integer.parseInt(hex3,16);
-		int decimal4 = Integer.parseInt(hex4,16);
-		int decimal5 = Integer.parseInt(hex5,16);
-		int decimal6 = Integer.parseInt(hex6,16);
-		int decimal7 = Integer.parseInt(hex7,16);
-		int decimal8 = Integer.parseInt(hex8,16);
-		int decimal9 = Integer.parseInt(hex9,16);
-		int decimal10 = Integer.parseInt(hex10,16);
+		int decimal1 = getDecimal(hex1);
+		int decimal2 = getDecimal(hex2);
+		int decimal3 = getDecimal(hex3);
+		int decimal4 = getDecimal(hex4);
+		int decimal5 = getDecimal(hex5);
+		int decimal6 = getDecimal(hex6);
+		int decimal7 = getDecimal(hex7);
+		int decimal8 = getDecimal(hex8);
+		int decimal9 = getDecimal(hex9);
+		int decimal10 = getDecimal(hex10);
 
 		toBinary(decimal1);
 		toBinary(decimal2);
@@ -46,5 +46,17 @@ public class HexToBinary {
 			System.out.print(binary[i]);
 		}
 		System.out.println();//new line
+	}
+
+	public static int getDecimal(String hex){
+		String digits = "0123456789ABCDEF";
+		hex = hex.toUpperCase();
+		int val = 0;
+		for (int i = 0; i < hex.length(); i++){
+			char c = hex.charAt(i);
+			int d = digits.indexOf(c);
+			val = 16 * val + d;
+		}
+		return val;
 	}
 }
