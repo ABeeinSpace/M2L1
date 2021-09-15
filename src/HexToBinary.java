@@ -1,6 +1,7 @@
 public class HexToBinary {
 	//Number of Instructions: 60
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		String hex1 = "36a";
 		String hex2 = "de";
 		String hex3 = "9e";
@@ -33,7 +34,11 @@ public class HexToBinary {
 		toBinary(decimal8);
 		toBinary(decimal9);
 		toBinary(decimal10);
-
+		long endTime = System.nanoTime();
+		long elapsedTime = endTime - startTime;
+		System.out.println("Total elapsed time: " + elapsedTime + " nanoseconds.");
+		long oneRunElapsed = elapsedTime / 10;
+		System.out.println("Time for One Run: " + oneRunElapsed + " nanoseconds.");
 	}
 
 	public static void toBinary(int num){
