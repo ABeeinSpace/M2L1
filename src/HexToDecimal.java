@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class HexToDecimal {
 	public static void main(String[] args) {
 		String hex1 = "36a";
@@ -11,6 +13,7 @@ public class HexToDecimal {
 		String hex9 = "12cb9";
 		String hex10 = "75bcd15";
 
+		/*
 		int decimal1 = Integer.parseInt(hex1,16);
 		int decimal2 = Integer.parseInt(hex2,16);
 		int decimal3 = Integer.parseInt(hex3,16);
@@ -21,7 +24,9 @@ public class HexToDecimal {
 		int decimal8 = Integer.parseInt(hex8,16);
 		int decimal9 = Integer.parseInt(hex9,16);
 		int decimal10 = Integer.parseInt(hex10,16);
+		*/
 
+		/*
 		System.out.println(decimal1);
 		System.out.println(decimal2);
 		System.out.println(decimal3);
@@ -32,5 +37,28 @@ public class HexToDecimal {
 		System.out.println(decimal8);
 		System.out.println(decimal9);
 		System.out.println(decimal10);
+		 */
+		System.out.println(getDecimal(hex1));
+		System.out.println(getDecimal(hex2));
+		System.out.println(getDecimal(hex3));
+		System.out.println(getDecimal(hex4));
+		System.out.println(getDecimal(hex5));
+		System.out.println(getDecimal(hex6));
+		System.out.println(getDecimal(hex7));
+		System.out.println(getDecimal(hex8));
+		System.out.println(getDecimal(hex9));
+		System.out.println(getDecimal(hex10));
+	}
+
+	public static int getDecimal(String hex){
+		String digits = "0123456789ABCDEF";
+		hex = hex.toUpperCase();
+		int val = 0;
+		for (int i = 0; i < hex.length(); i++){
+			char c = hex.charAt(i);
+			int d = digits.indexOf(c);
+			val = 16 * val + d;
+		}
+		return val;
 	}
 }
